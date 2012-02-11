@@ -5,12 +5,12 @@
 (defn binary-generator [length]
   (cond (= 0 length) '()
         (= 1 length) '((0) (1))
-        (= 2 length) (concat (list (map conj
+        (= 2 length) (concat (map conj
                                           (repeat (nth (binary-generator 1) 0))
-                                          '(0 1)))
-                             (list (map conj
+                                          '(0 1))
+                             (map conj
                                           (repeat (nth (binary-generator 1) 1))
-                                          '(0 1)))))
+                                          '(0 1))))
   )
 
 (deftest length-0-return-empty-sequence

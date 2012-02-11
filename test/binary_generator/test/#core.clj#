@@ -3,7 +3,7 @@
   (:use [clojure.test]))
 
 (defn binary-generator [length]
-  (cond (= length 0) '()
+  (cond (= length 0) '(())
         (= length 1) '((0) (1))
         (>= length 2)
         (apply concat (map (fn [new-digit] (map conj

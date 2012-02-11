@@ -9,9 +9,11 @@
         (apply concat (map (fn [x] (map conj
                                         (repeat (nth (binary-generator (- length 1))
                                                      x))
-                                        (range (count (binary-generator (- length 1))))))
+                                        '(0 1)))
                            '(0 1)))))
 
+((0 0 0) (1 0 0)
+ (0 1 0) (1 1 0))
 
 (deftest length-0-return-empty-sequence
   (is (= '() (binary-generator 0))))

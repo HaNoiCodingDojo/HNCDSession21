@@ -12,3 +12,7 @@
 (deftest length-1-return-0-and-1
   (is (= '((0) (1))
          (binary-generator 1))))
+
+(deftest length-2-return-0-0-and-0-1-and-1-0-and-1-1
+  (is (= '((0 0) (0 1) (1 0) (1 1))
+         (binary-generator 2))))

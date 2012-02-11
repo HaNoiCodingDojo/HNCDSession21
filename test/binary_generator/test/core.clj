@@ -3,9 +3,9 @@
   (:use [clojure.test]))
 
 (defn binary-generator [length]
-  (cond (= 0 length) '()
-        (= 1 length) '((0) (1))
-        (>= 2 length)
+  (cond (= length 0) '()
+        (= length 1) '((0) (1))
+        (>= length 2)
         (apply concat (map (fn [x] (map conj
                                         (repeat (nth (binary-generator (- length 1))
                                                      x))

@@ -4,7 +4,9 @@
 
 (defn binary-generator [length]
   (cond (= 0 length) '()
-        (= 1 length) '((0) (1))))
+        (= 1 length) '((0) (1))
+        (= 2 length) '((0 0) (0 1) (1 0) (1 1)))
+  )
 
 (deftest length-0-return-empty-sequence
   (is (= '() (binary-generator 0))))

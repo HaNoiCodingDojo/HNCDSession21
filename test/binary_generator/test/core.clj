@@ -5,7 +5,7 @@
 (defn binary-generator [length]
   (cond (= 0 length) '()
         (= 1 length) '((0) (1))
-        (= 2 length) (concat (list (conj '(0) 0)) (list (conj '(0) 1)) (list (conj '(1) 0)) (list (conj '(1) 1))))
+        (= 2 length) (concat (list (conj '(0) 0)) (list (conj '(1) 0)) (list (conj '(0) 1)) (list (conj '(1) 1))))
 
   )
 
